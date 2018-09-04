@@ -32,4 +32,9 @@ To edit the types of the nodes run
 kops edit ig nodes --name ${The name of the cluster} --state ${s3 bucket}
 ```
 
+Change the editor to used nano (this will make you a happier person) 
+```Bash
+export KUBE_EDITOR=emacs
+```
+
 4) Launch the cluster
