@@ -26,4 +26,10 @@ To check the configurations run the following command:
 ```Bash
 kops get instancegroups --name hansson.k8s.local --state s3://kubernetes-aws-niklas-hansson
 ```
+
+To edit the types of the nodes run 
+```Bash
+kops edit ig nodes --name ${The name of the cluster} --state ${s3 bucket}
+```
+
 4) Launch the cluster
