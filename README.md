@@ -17,7 +17,13 @@ aws s3api create-bucket --bucket ${bucket name} --region ${region} --create-buck
 $ aws s3api put-bucket-versioning --bucket ${bucket name}  --versioning-configuration Status=Enabled
 ```
 
-3) Create the configuration of the cluster
+3) Create the configuration of the cluster, change settings accoring to demands:
 
-
+```Bash
+kops create cluster --node-count=2 --node-size=t2.small --zones=us-west-2a --name=${cluster name} --state ${s3 bucket}
+```
+To check the configurations run the following command:
+```Bash
+kops get instancegroups --name hansson.k8s.local --state s3://kubernetes-aws-niklas-hansson
+```
 4) Launch the cluster
