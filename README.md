@@ -38,3 +38,7 @@ export KUBE_EDITOR=emacs
 ```
 
 4) Launch the cluster
+```Bash
+kops update cluster --name hansson.k8s.local --state s3://kubernetes-aws-niklas-hansson --yes
+```
+
